@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --config src/webpack.config.dev.js",
     "build": "webpack --config webpack.config.js",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "dev": "webpack serve --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -43,7 +44,9 @@
     "stylus-loader": "^8.1.1",
     "terser-webpack-plugin": "^5.3.11",
     "url-loader": "^4.1.1",
-    "webpack-cli": "^6.0.1"
+    "webpack-bundle-analyzer": "^4.10.2",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
   },
   "type": "module"
 }

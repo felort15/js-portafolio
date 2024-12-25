@@ -32,6 +32,7 @@ export default {
     }
   },
   module: {
+    devtool: 'source-map',
     rules: [
       {
         test: /\.m?js$/,
@@ -97,7 +98,17 @@ export default {
       new CssMinimizerPlugin(),
       new TerserPlugin()
     ]
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist')
+    },
+    compress: true,
+    historyApiFallback: true,
+    port: 3006,
+    open: true
   }
 }
+
 
 
